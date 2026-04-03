@@ -48,10 +48,10 @@ const Builder = () => {
   });
 
   return (
-    <div className="min-h-screen bg-slate-100 p-4 md:p-8 font-sans text-slate-800 flex flex-col lg:flex-row gap-6">
+    <div className="min-h-screen bg-slate-100 p-4 md:p-8 font-sans text-slate-800 flex flex-col lg:flex-row gap-6 print:p-0 print:bg-white print:block">
       
       {/* LEFT: COMPACT EDITOR */}
-      <div className="w-full lg:w-[45%] h-fit max-h-[90vh] flex flex-col bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+      <div className="w-full lg:w-[45%] h-fit max-h-[90vh] flex flex-col bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden print:hidden">
         
         {/* Editor Header */}
         <div className="bg-slate-800 px-6 py-4 flex justify-between items-center text-white">
@@ -125,7 +125,7 @@ const Builder = () => {
       </div>
 
       {/* RIGHT: EXACT A4 RESUME PREVIEW */}
-      <div className="w-full lg:w-[55%] flex justify-center overflow-x-auto pb-10">
+      <div className="w-full lg:w-[55%] flex justify-center overflow-x-auto pb-10 print:w-full print:p-0 print:m-0 print:overflow-visible">
         <div 
           ref={resumeRef}
           className="bg-white w-[210mm] h-[297mm] overflow-hidden shadow-2xl flex flex-col print:shadow-none print-exact-colors relative"
